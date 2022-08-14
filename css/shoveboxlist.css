@@ -23,7 +23,7 @@ https://blog.logrocket.com/how-to-use-css-variables-like-a-pro/ */
   /* -webkit-appearance: none;  
   appearance: none; */
      overflow-y:scroll; 
-     /* overflow-x: clip; */
+     overflow-x: clip;
      border-style: solid;
      border-color: gray;
      border-width: 2px;
@@ -125,8 +125,24 @@ vertical-align: middle; */
   appearance: none !important;/* Override default look */
   width: var(--shoveboxheight); /* Set a specific slider handle width */
   height: var(--gripheight); /* Slider handle height */
+  /* background:rgb(50, 36, 0);
   background-image: url('../drawables/grip-pattern.png');  
-  background-repeat: repeat;
+  background-repeat: repeat; */
+  border-radius:var(--gripradius);
+  cursor: pointer; /* Cursor on hover */
+  position: relative;
+  background: conic-gradient(
+		from 45deg,
+		gray  0,
+		gray 90deg,
+		darkgray 90deg,
+		darkgray 180deg,
+		lightgray 180deg,
+		lightgray  270deg,
+		white  270deg,
+		white  360deg
+	);
+	background-size: 6px 6px;
   border-radius: var(--gripradius);
   cursor: pointer; /* Cursor on hover */
   position: relative;
@@ -137,11 +153,29 @@ vertical-align: middle; */
   appearance: none !important;/* Override default look */
   width: var(--shoveboxheight); /* Set a specific slider handle width */
   height: var(--gripheight); /* Slider handle height */
+  /* background:rgb(50, 36, 0);
   background-image: url('../drawables/grip-pattern.png');  
-  background-repeat: repeat;
+  background-repeat: repeat; */
   border-radius:var(--gripradius);
   cursor: pointer; /* Cursor on hover */
   position: relative;
+  background: conic-gradient(
+		from 45deg,
+		gray  0,
+		gray 90deg,
+		darkgray 90deg,
+		darkgray 180deg,
+		lightgray 180deg,
+		lightgray  270deg,
+		white  270deg,
+		white  360deg
+	);
+	background-size: 6px 6px;
+}
 
+
+
+input[type="number"] {
+  width:50px;
 }
 

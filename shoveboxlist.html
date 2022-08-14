@@ -17,7 +17,7 @@
 
 	
   
-<ul class="shoveboxlist"  style="position:fixed ; left: 10%; top: 15% ;width:80%; height:80% ;" minlevel="1" maxlevel="6" >
+<ul class="shoveboxlist"  style="position:fixed ; left: 10%; top: 15% ;width:50%; height:40% ;" minlevel="1" maxlevel="6" >
   
 
   <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
@@ -27,17 +27,22 @@
   <div class="shovebox" level=1 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
     
     <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
 
-            <input type="text" style="  left:40px; height:100%;width:8em" value = "1." >
+            <input type="text" style=" width:100px" value = "1." >
 
 
             <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
             title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
             >Lorem ipsum dolor sit amet</textarea>
-        
+         
+            <label for="quant" >
+              <input type="number" name="quantity" id="quant"
+                  min="0" max="1000" step="10" value="18">
+          </label>
    
             <select name="unit" id="unit">
+              <option value="0"  selected="selected">pc.</option>
             <option value="1">l</option>
             <option value="2">m²</option>
             <option value="3">m</option>
@@ -52,7 +57,11 @@
     <input type="range"  class="slider"  oninput="shove(this)" >
     <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
            
-            <input type="text" style="  left:40px;resize: none;width:8em" value = "1.1.1.1.1.1.1" >
+            <input type="text"  value = "1.1.1.1.1.1.1" >
+
+
+
+
             <textarea   rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
             title= "Lorem ipsum dolor sit amet Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
             ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
@@ -198,10 +207,26 @@ function editPopup(shoveBox) {
 function inputGotFocus(contentElement)
 {
 
-contentElement.parentElement.parentElement.style=" outline: #4c8eaf solid 5px;"
-
+    if (contentElement.parentElement)
+          {
+         // contentElement.parentElement.parentElement.style=" outline: #212121 solid 2px;"
+          // contentElement.parentElement.style=" outline: #212121 solid 2px";
+          }
 
 }
+
+function inputGotBlurred(contentElement)
+{
+if (contentElement.parentElement)
+          {
+
+            // outline: 1px dotted #212121;
+            // outline: 5px auto -webkit-focus-ring-color;
+
+          //contentElement.parentElement.parentElement.style=" outline: 5px auto -webkit-focus-ring-color;"
+          }
+
+        }
 
 function startDraggingShovebox(ev) {
 
@@ -310,9 +335,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }, false);
 
 
-            // https://dev.to/elijahtrillionz/how-to-center-align-items-in-css-with-4-solid-methods-31c3
+            shoveboxcontent = shovebox.childNodes[3];
 
 
+            // 'cast' the shoveboxcontent container to an array to make use of the Array's indexOf function 
+            shoveboxcontent.contentElements = Array.prototype.slice.call( shoveboxcontent.children );
+
+            shoveboxcontent.childNodes.forEach(            
+
+            function(contentelement)
+            {
+
+              if (contentelement.nodeType ==1)
+              {
+               contentelement.setAttribute("onfocus","inputGotFocus(this)");
+               contentelement.setAttribute("onblur","inputGotBlurred(this)");
+
+
+             dummy = 0;
+
+              }
+
+
+
+            }
+            );
+
+            
 
 
         };
