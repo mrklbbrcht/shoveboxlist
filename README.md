@@ -16,7 +16,7 @@ A Hierarchical List Widget created by Mark Libbrecht, first published in the Apr
 > * Visual and data manipulations by means of shortcut menu 
 
 ## UI
-![Shoveboxlist Widget](./Figure1.JPG)
+![Shoveboxlist Widget](./readme/Figure1.JPG)
 
 ## Shortcut menu
-![Context Menu](./Figure2.JPG)
+![Context Menu](./readme/Figure2.JPG)
