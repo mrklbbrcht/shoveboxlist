@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>shoveBoxList- Default functionality</title>
+  <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
+  <link rel="stylesheet" href="css/shoveboxlist.css">
+
+  
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+
+  </script> 
+</head>
+<body style="background: rgba(123, 89, 31, 0.353); ">
+
+	
+  
+<ul class="shoveboxlist"  style="position:fixed ; left: 10%; top: 15% ;width:80%; height:80% ;" minlevel="1" maxlevel="6" >
+  
+
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+ 
+ 
+ 
+  <div class="shovebox" level=1 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
+    
+    <input type="range"  class="slider"  oninput="shove(this)"                   >
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+
+            <input type="text" style="  left:40px; height:100%;width:8em" value = "1." >
+
+
+            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            >Lorem ipsum dolor sit amet</textarea>
+        
+   
+            <select name="unit" id="unit">
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+            </select>
+    </div>
+  </div>
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+ 
+ 
+  <div class="shovebox" level=2 format="1"  shovebox-id="2" ondragstart="startDraggingShovebox(event)"  ondblclick="editPopup(this)">
+    <input type="range"  class="slider"  oninput="shove(this)" >
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+           
+            <input type="text" style="  left:40px;resize: none;width:8em" value = "1.1.1.1.1.1.1" >
+            <textarea   rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title= "Lorem ipsum dolor sit amet Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
+            >Lorem ipsum dolor sit amet</textarea>
+            <select name="unit" id="unit">
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+            </select>
+    </div>
+  </div>
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+   <div class="shovebox" level=3 format="1"  shovebox-id="3" ondragstart="startDraggingShovebox(event)"  ondblclick="editPopup(this)">
+    <input type="range"  class="slider"  oninput="shove(this)" >
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+           
+            <input type="text" style="  left:40px;resize: none;width:8em" value = "1.1.1.1.1.1.1" >
+            <textarea   rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title= "Lorem ipsum dolor sit amet Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
+            >Lorem ipsum dolor sit amet</textarea>
+            <select name="unit" id="unit">
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+            </select>
+    </div>
+  </div>
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+   <div class="shovebox" level=2 format="1"  shovebox-id="4" ondragstart="startDraggingShovebox(event)"  ondblclick="editPopup(this)" >
+    <input type="range"  class="slider"  oninput="shove(this)" >
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+           
+            <input type="text" style="  left:40px;resize: none;width:8em" value = "1.1.1.1.1.1.1" >
+            <textarea   rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title= "Lorem ipsum dolor sit amet Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
+            >Lorem ipsum dolor sit amet</textarea>
+            <select name="unit" id="unit">
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+            </select>
+    </div>
+  </div>
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+   <div class="shovebox" level=1 format="1"  shovebox-id="5" ondragstart="startDraggingShovebox(event)"  ondblclick="editPopup(this)">
+    <input type="range"  class="slider"  oninput="shove(this)" >
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+           
+            <input type="text" style="  left:40px;resize: none;width:8em" value = "1.1.1.1.1.1.1"  onfocus="inputGotFocus(this)">
+            <textarea   rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title= "Lorem ipsum dolor sit amet Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."  onfocus="inputGotFocus(this)"
+            >Lorem ipsum dolor sit amet     "   </textarea>
+            <select name="unit" id="unit"  onfocus="inputGotFocus(this)">
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+            </select>
+    </div>
+    <shoveboxlevel type="hidden">1</shoveboxlevel>
+  </div>
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div> 
+   <div class="shovebox" level=2 format="1"  shovebox-id="6" ondragstart="startDraggingShovebox(event)"  ondblclick="editPopup(this)">
+    <input type="range"  class="slider"  oninput="shove(this)" >
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+           
+            <input type="text" style="  left:40px;resize: none;width:8em" value = "1.1.1.1.1.1.1" >
+            <textarea   rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title= "Lorem ipsum dolor sit amet Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
+            >Lorem ipsum dolor sit amet</textarea>
+            <select name="unit" id="unit">
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+            </select>
+    </div>
+  </div>
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div> 
+ 
+ 
+  <div class="shovebox" level=6 format="1"  shovebox-id="6" ondragstart="startDraggingShovebox(event)"  ondblclick="editPopup(this)">
+    <input type="range"  class="slider"  oninput="shove(this)" >
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true" >    
+           
+            <input type="text" style="  left:40px;resize: none;width:8em" value = "1.1.1.1.1.1.1" >
+            <textarea   rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title= "Lorem ipsum dolor sit amet Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
+            >Lorem ipsum dolor sit amet</textarea>
+            <select name="unit" id="unit">
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+            </select>
+    </div>
+  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+</ul>
+
+
+ 
+
+  
+<script >
+
+
+var bodystyle = getComputedStyle(document.body)
+
+
+function editPopup(shoveBox) {
+
+  var indeks =  shovebox.parentElement.shoveBoxNodes.indexOf(shoveBox);
+
+  var txt;
+  if (confirm("This popup windows would enable editing the clicked shovebox = the ShoveBoxList's child with index "+ String(indeks))) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  // document.getElementById("popupanchor").innerHTML = txt;
+}
+
+function inputGotFocus(contentElement)
+{
+
+contentElement.parentElement.parentElement.style=" outline: #4c8eaf solid 5px;"
+
+
+}
+
+function startDraggingShovebox(ev) {
+
+
+  event.currentTarget.parentElement.draggedShoveBoxIndex = event.currentTarget.parentElement.shoveBoxNodes.indexOf(ev.currentTarget)
+
+
+
+// ev.dataTransfer.setData( 'text/plain',draggedShoveBoxIndex) 
+
+dummy = 0;
+
+
+}
+
+
+
+function dragOverPlaceholder(ev) {
+
+
+  // padding-top: 0.25rem; 
+  dummy = 0;
+
+  const  draggedShoveBoxIndex = event.currentTarget.parentElement.draggedShoveBoxIndex;
+  const placeHolder = ev.currentTarget ;
+  const placeHolderIndex = placeHolder.parentElement.shoveBoxNodes.indexOf(placeHolder); 
+
+  if ( Math.abs( draggedShoveBoxIndex - placeHolderIndex) > 2 ) 
+  
+  {
+    
+  placeHolder.style.height = bodystyle.getPropertyValue('--shoveboxheight') ;
+  ev.preventDefault();
+
+};
+
+}
+
+
+function dragLeave(placeholder)
+{
+  placeholder.style.height = bodystyle.getPropertyValue('--shoveboxplaceholderheight');
+}
+
+function shove(levelslider){
+
+var shovebox = levelslider.parentNode;
+var shoveboxcontent = shovebox.childNodes[3];
+var slide = shovebox.childNodes[1];
+
+    gripheight = parseInt(bodystyle.getPropertyValue('--gripheight')) ;
+    gripwidth = parseInt(bodystyle.getPropertyValue('--shoveboxheight')) ;    
+    gripradius = parseInt(bodystyle.getPropertyValue('--gripradius')) ;
+
+ 
+test = shoveboxcontent.getBoundingClientRect();
+content = document.getElementById("shoveboxcontent");
+ shoveboxcontent.style.position = 'absolute';
+
+ 
+//  sliderunit = (slide.scrollWidth-gripwidth)/( parseInt(slide.max)-parseInt(slide.min)  );
+
+ shoveboxcontent.style.left =   String(   ((  slide.value - slide.min )/(slide.max-slide.min)) * (slide.scrollWidth-gripwidth)  + (gripwidth)+gripradius)+'px';
+
+
+}     ;
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // initialization of the window
+
+    var shoveBoxLists = document.querySelectorAll(".shoveboxlist");
+    shoveBoxLists.forEach(
+
+
+
+    function(shoveboxlist)
+    {
+      shoveboxlist.minLevel =  parseInt(shoveboxlist.getAttribute('minlevel'));
+      shoveboxlist.maxLevel =  parseInt(shoveboxlist.getAttribute('maxlevel'));
+
+      // 'cast' the shoveboxlist to an array to make use of the Array's indexOf function 
+      shoveboxlist.shoveBoxNodes = Array.prototype.slice.call( shoveboxlist.children );
+
+      shoveboxlist.childNodes.forEach(
+       
+      function(child)
+        {
+        if ( child.className == "shovebox")
+        {
+          shovebox = child;
+          slider = shovebox.childNodes[1];
+          slider.setAttribute('min', shoveboxlist.minLevel);
+          slider.setAttribute('max', shoveboxlist.maxLevel);
+          slider.setAttribute('value',shovebox.getAttribute('level'));
+
+          shove(slider);
+
+
+          var indeks =  slider.parentElement.parentElement.shoveBoxNodes.indexOf(slider.parentElement);
+
+          slider.addEventListener('contextmenu', function(ev) {
+                ev.preventDefault();
+                alert('Clicked on grip from Shovebox with index '+indeks+ '\nHere wil appear a contextmenu !');
+                return false;
+            }, false);
+
+
+            // https://dev.to/elijahtrillionz/how-to-center-align-items-in-css-with-4-solid-methods-31c3
+
+
+
+
+        };
+      });
+
+   } );
+
+
+
+});
+
+ 
+  
+    </script>
+
+</body>
+</html>
