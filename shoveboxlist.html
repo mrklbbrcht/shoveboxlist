@@ -427,15 +427,8 @@ content = document.getElementById("shoveboxcontent");
 }     ;
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  // initialization of the window
-
-    var shoveBoxLists = document.querySelectorAll(".shoveboxlist");
-    shoveBoxLists.forEach(
-
-
-
-    function(shoveboxlist)
+// first time initialization or refreshing of shoveboxlist
+function initShoveboxlist (shoveboxlist)
     {
       shoveboxlist.minLevel =  parseInt(shoveboxlist.getAttribute('minlevel'));
       shoveboxlist.maxLevel =  parseInt(shoveboxlist.getAttribute('maxlevel'));
@@ -499,8 +492,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         };
       });
 
-   } );
+   } ;
 
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // first time initialization of the window
+
+    var shoveBoxLists = document.querySelectorAll(".shoveboxlist");
+    shoveBoxLists.forEach(
+
+      initShoveboxlist);
 
 
 });
