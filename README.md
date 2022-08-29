@@ -1,6 +1,6 @@
 # shoveboxlist
 
-A Hierarchical List Widget created by Mark Libbrecht, first published in the April 2001 edition of Foxtalk Magazine, entitled "You Can Push it Around in Your...ShoveBoxList".  
+A Hierarchical List Widget created by Mark Libbrecht, first [published in the April 2001 edition of Foxtalk Magazine](./readme/ShoveBoxList.pdf), entitled "You Can Push it Around in Your...ShoveBoxList".  
 
 
 ### Key features
