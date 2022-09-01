@@ -43,7 +43,7 @@ https://blog.logrocket.com/how-to-use-css-variables-like-a-pro/ */
 
     position: relative;
     display: block;
-    color: #212529;
+    /* color: #212529; */
     text-decoration: none;
     /* background-color: #fff; */
     overflow:hidden;
@@ -206,13 +206,37 @@ input[type=number] {
 
 
 
+.titleswitch {
+  position: relative;
+
+  padding-right: 4px;
+
+  padding-left: 4px;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  height: var(--shoveboxheight);
+  
+  /* background-color:lightgrey; */
+  width:10px;
+  /* z-index: +1; */
+
+}
+
+
+
  /* The switch - the box around the slider */
  .switch {
   position: relative;
   display: inline-block;
   height: var(--shoveboxheight);
-
-  width:20px;
+  
+  /* background-color:lightgrey; */
+  width:10px;
+  /* z-index: +1; */
 
 }
 
@@ -221,45 +245,65 @@ input[type=number] {
   opacity: 0;
   width: 0;
   height: 0;
+
 }
 
 /* The slider */
 .switchslider {
   position: absolute;
   cursor: pointer;
-  /* top: 0; */
+  top: 4px;
   left: 0;
   right: 0;
-  /* bottom: 0; */
-  background-color: grey;
+  bottom: 4px;
+  background-color:#2ecc71;
   -webkit-transition: .4s;
   transition: .4s;
+
 }
 
 .switchslider:before {
   position: absolute;
   content: "";
-  height: 13px;
-  width: 13px;
-  left: 4px;
-  /* bottom: 4px; */
-  background-color: darkgrey;
+  height: 10px;
+  width: 10px;
+  left: 0px;
+  bottom: 12px;
+  background-color:darkgrey;
   -webkit-transition: .4s;
   transition: .4s;
 
 }
 
 input:checked + .switchslider {
-  background-color: #2196F3;
+  
+  background-color:  white;
 }
 
 input:focus + .switchslider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 2px black;
+  
+
 }
 
 input:checked + .switchslider:before {
-  -webkit-transform: translateY(13px);
-  -ms-transform: translateY(13px);
-  transform: translateY(13px);
+  -webkit-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  transform: translateY(12px);
+  background-color:darkgrey;
+
 }
+
+
+
+
+/* Rounded sliders */
+.switchslider.round {
+  border-radius: 34px;
+}
+
+.switchslider.round:before {
+  border-radius: 50%;
+}
+
 
