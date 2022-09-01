@@ -14,8 +14,8 @@
   </script> 
 </head>
 <body style="background: rgba(123, 89, 31, 0.353); ">
+</br>
 
-	
   
 <ul class="shoveboxlist"  style="position:fixed ; left: 10%; top: 15% ;width:50%; height:40% ;" minlevel="1" maxlevel="6" >
   
@@ -26,7 +26,14 @@
  
   <div class="shovebox" level=1 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
     <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
+    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   > 
+      
+      
+      <label class="switch">
+        <input type="checkbox">
+        <span class="switchslider"></span>
+      </label>
+
            <input type="text" style=" width:100px" value = "1." >
             <textarea class=""  rows="1" cols="30"  style="resize: horizontal;  white-space: nowrap; overflow-x: hidden;"
             title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
