@@ -256,10 +256,10 @@ input[type=number] {
   left: 0;
   right: 0;
   bottom: 4px;
-  background-color:#2ecc71;
+  background-color:white;
   -webkit-transition: .4s;
   transition: .4s;
-
+  box-shadow: 0 0 2px black;
 }
 
 .switchslider:before {
@@ -268,7 +268,7 @@ input[type=number] {
   height: 10px;
   width: 10px;
   left: 0px;
-  bottom: 12px;
+  bottom: 0px;
   background-color:darkgrey;
   -webkit-transition: .4s;
   transition: .4s;
@@ -277,19 +277,19 @@ input[type=number] {
 
 input:checked + .switchslider {
   
-  background-color:  white;
+  background-color: #2ecc71;
 }
 
-input:focus + .switchslider {
+/* input:focus + .switchslider {
   box-shadow: 0 0 2px black;
   
 
-}
+} */
 
 input:checked + .switchslider:before {
-  -webkit-transform: translateY(12px);
-  -ms-transform: translateY(12px);
-  transform: translateY(12px);
+  -webkit-transform: translateY(-12px);
+  -ms-transform: translateY(-12px);
+  transform: translateY(-12px);
   background-color:darkgrey;
 
 }
