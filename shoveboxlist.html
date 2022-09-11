@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,875 +8,958 @@
   <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
   <link rel="stylesheet" href="css/shoveboxlist.css">
 
-  
+
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
- 
+
 </head>
+
 <body>
 
-<i class="fa fa-car"></i>
-<i class="fa fa-car" style="font-size:48px;"></i>
-<i class="fa fa-car" style="font-size:60px;color:red;"></i>
-  </script> 
-</head>
-<body style="background: rgba(123, 89, 31, 0.353); ">
-  <!-- <body > -->
-</br>
+  <i class="fa fa-car"></i>
+  <i class="fa fa-car" style="font-size:48px;"></i>
+  <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+  </script>
+  </head>
 
+  <body style="background: rgba(123, 89, 31, 0.353); ">
+    <!-- <body > -->
+    </br>
 
+    <ul class="shoveboxlist" style="position:fixed ; left: 10%; top: 15% ;width:50%; height:40% ;" minlevel="1"
+      maxlevel="6" autoref="true">
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=1 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
 
-<ul class="shoveboxlist"  style="position:fixed ; left: 10%; top: 15% ;width:50%; height:40% ;" minlevel="1" maxlevel="6" autoref="true">
-    <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-  <div class="shovebox" level=1 format="1" shovebox-id="1"     ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   > 
-      
-      <div class="titleswitch">
-      <label class="switch">
-         <input type="checkbox"  onclick="switched(this)"   checked="checked">
-        <span class="switchslider  round"></span>
-      </label>
-    </div>
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)" checked="checked">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
 
-           <input class="ref" type="text" style=" width:70px" value = "1." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
+          <input class="ref" type="text" style=" width:70px" value="">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
           </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
             <option value="1">l</option>
             <option value="2">m²</option>
             <option value="3">m</option>
             <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-      <input class="selectbox" type="checkbox"  checked="checked">
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-  <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-
-      <div class="titleswitch">
-        <label class="switch">
-          <input type="checkbox"  onclick="switched(this)"   checked="checked">
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-           <input class="ref" type="text" style=" width:70px" value = "1.1." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-      <input class="selectbox" type="checkbox"  checked="checked">
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-  <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-      <input class="ref" type="text" style=" width:70px" value = "1.2." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-      <input class="selectbox" type="checkbox"  checked="checked">
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-   <div class="shovebox" level=1 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-      <input class="ref" type="text" style=" width:70px" value = "2." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-			<input class="selectbox" type="checkbox" >
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-   <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-      <input class="ref" type="text" style=" width:70px" value = "2.1." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-			<input class="selectbox" type="checkbox" >
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-   <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-      <input class="ref" type="text" style=" width:70px" value = "2.1.1." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-			<input class="selectbox" type="checkbox" >
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-   <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-      <input class="ref" type="text" style=" width:70px" value = "2.1.2." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-			<input class="selectbox" type="checkbox" >
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-   <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-      <input class="ref" type="text" style=" width:70px" value = "1." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-			<input class="selectbox" type="checkbox" >
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-   <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div> 
-      <input class="ref" type="text" style=" width:70px" value = "1." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-			<input class="selectbox" type="checkbox" >
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
-   <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)" ondblclick="editPopup(this)"   >
-    <input type="range"  class="slider"  oninput="shove(this)"                   >
-    <div class="shoveboxcontent"  id="shoveboxcontent"  draggable="true"   >    
-      <div class="titleswitch">
-        <label class="switch">
-           <input type="checkbox"  onclick="switched(this)" >
-          <span class="switchslider  round"></span>
-        </label>
-      </div>
-      <input class="ref" type="text" style=" width:70px" value = "1." >
-            <textarea class=""  rows="1" cols="30"  style="resize: none;  white-space: nowrap; overflow-x: hidden;"
-            title= "DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
-            flexwidth="true"      >Lorem ipsum dolor sit amet</textarea>
-            <label for="quant" >
-              <input type="number" name="quantity" id="quant"
-                  min="0" max="1000" step="10" value="18">
-          </label>
-            <select name="unit" id="unit">
-              <option value="0"  selected="selected">pc.</option>
-            <option value="1">l</option>
-            <option value="2">m²</option>
-            <option value="3">m</option>
-            <option value="4">hours</option>
-            </select>
-			<input name="up" type="number" value="10">
-			<input name="total"  type="number" value="180">
-			<input class="selectbox" type="checkbox" >
-    </div>
-  </div>
-  <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
- </ul>
-
-
- 
-<div class="wrapper">
-  <div class="content">
-    <ul class="menu">
-      <li class="item">
-        <i class="fas fa-copy"></i>
-        <span>Copy</span>
-      </li>
-      <li class="item">
-        <i class="fas fa-cut"></i>
-        <span>Cut</span>
-      </li>
-
-
-      <li class="item select">
-        <div>
-          <i class="fa fa-tasks"></i>
-          <span>Select</span>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox" checked="checked">
         </div>
-        <i class="uil uil-angle-right"></i>
-        <ul class="select-menu">
-          <li class="item">
-            <i class="far fa-list-alt"></i>
-            <span>Select All</span>
-          </li>
-          <li class="item">
-            <i class="fas fa-list-alt"></i>
-            <span>Select inversion</span>
-          </li>
-          
-        </ul>
-      </li>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
 
-
-
-
-
-
-
-
-
-      <li class="item paste">
-        <div>
-          <i class="fa fa-paste"></i>
-          <span>Paste</span>
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)" checked="checked">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="1.1.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox" checked="checked">
         </div>
-        <i class="uil uil-angle-right"></i>
-        <ul class="paste-menu">
-          <li class="item">
-            <i class="fas fa-sign-in-alt"></i>
-            <span>Paste Before</span>
-          </li>
-          <li class="item">
-            <i class="fas fa-sign-out-alt"></i>
-            <span>Paste After</span>
-          </li>
-          
-        </ul>
-      </li>
-
-      <li class="item">
-        <i class="fas fa-trash-alt"></i>
-        <span>Delete selected rows</span>
-      </li>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="1.2.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox" checked="checked">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=1 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="2.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="2.1.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="2.1.1.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="2.1.2.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="1.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=2 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="1.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
+      <div class="shovebox" level=3 format="1" shovebox-id="1" ondragstart="startDraggingShovebox(event)"
+        ondblclick="editPopup(this)">
+        <input type="range" class="slider" oninput="shove(this)">
+        <div class="shoveboxcontent" id="shoveboxcontent" draggable="true">
+          <div class="titleswitch">
+            <label class="switch">
+              <input type="checkbox" onclick="switched(this)">
+              <span class="switchslider  round"></span>
+            </label>
+          </div>
+          <input class="ref" type="text" style=" width:70px" value="1.">
+          <textarea class="" rows="1" cols="30" style="resize: none;  white-space: nowrap; overflow-x: hidden;"
+            title="DESCRIPTION:&#013Lorem ipsum dolor sit amet, consectetur adipiscing elit. &#013Pellentesque eget pellentesque augue, sit amet cursus ipsum. Nulla commodo id justo id auctor. "
+            flexwidth="true">Lorem ipsum dolor sit amet</textarea>
+          <label for="quant">
+            <input type="number" name="quantity" id="quant" min="0" max="1000" step="10" value="18">
+          </label>
+          <select name="unit" id="unit">
+            <option value="0" selected="selected">pc.</option>
+            <option value="1">l</option>
+            <option value="2">m²</option>
+            <option value="3">m</option>
+            <option value="4">hours</option>
+          </select>
+          <input name="up" type="number" value="10">
+          <input name="total" type="number" value="180">
+          <input class="selectbox" type="checkbox">
+        </div>
+      </div>
+      <div class="shoveboxplaceholder" ondragover="dragOverPlaceholder(event)" ondragleave="dragLeave(this)"></div>
     </ul>
-    <div class="setting">
-      <li class="item">
-        <i class="fas fa-cog"></i>
-        <span>Settings</span>
-      </li>
+
+
+
+    <div class="wrapper">
+      <div class="content">
+        <ul class="menu">
+          <li class="item">
+            <i class="fas fa-copy"></i>
+            <span>Copy</span>
+          </li>
+          <li class="item">
+            <i class="fas fa-cut"></i>
+            <span>Cut</span>
+          </li>
+
+
+          <li class="item select">
+            <div>
+              <i class="fa fa-tasks"></i>
+              <span>Select</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+            <ul class="select-menu">
+              <li class="item">
+                <i class="far fa-list-alt"></i>
+                <span>Select All</span>
+              </li>
+              <li class="item">
+                <i class="fas fa-list-alt"></i>
+                <span>Select inversion</span>
+              </li>
+
+            </ul>
+          </li>
+
+
+
+
+
+
+
+
+
+          <li class="item paste">
+            <div>
+              <i class="fa fa-paste"></i>
+              <span>Paste</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+            <ul class="paste-menu">
+              <li class="item">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Paste Before</span>
+              </li>
+              <li class="item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Paste After</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="item">
+            <i class="fas fa-trash-alt"></i>
+            <span>Delete selected rows</span>
+          </li>
+        </ul>
+        <div class="setting">
+          <li class="item">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+          </li>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-  
-<script >
+
+    <script>
 
 
-var bodystyle = getComputedStyle(document.body)
+      var bodystyle = getComputedStyle(document.body)
 
 
-function editPopup(shoveBox) {
+      function editPopup(shoveBox) {
 
-  var indeks =  shovebox.parentElement.shoveBoxNodes.indexOf(shoveBox);
+        var indeks = shovebox.parentElement.shoveBoxNodes.indexOf(shoveBox);
 
-  var txt;
-  if (confirm("This popup windows would enable editing the clicked shovebox = the ShoveBoxList's child with index "+ String(indeks))) {
-    txt = "You pressed OK!";
-  } else {
-    txt = "You pressed Cancel!";
-  }
-  // document.getElementById("popupanchor").innerHTML = txt;
-}
+        var txt;
+        if (confirm("This popup windows would enable editing the clicked shovebox = the ShoveBoxList's child with index " + String(indeks))) {
+          txt = "You pressed OK!";
+        } else {
+          txt = "You pressed Cancel!";
+        }
+        // document.getElementById("popupanchor").innerHTML = txt;
+      }
 
-function inputGotFocus(contentElement)
-{
+      function inputGotFocus(contentElement) {
 
-    if (contentElement.parentElement)
-          {
-          }
-
-}
-
-function inputGotBlurred(contentElement)
-{
-if (contentElement.parentElement)
-          {
-
-            // outline: 1px dotted #212121;
-            // outline: 5px auto -webkit-focus-ring-color;
-
-          //contentElement.parentElement.parentElement.style=" outline: 5px auto -webkit-focus-ring-color;"
-          }
-
+        if (contentElement.parentElement) {
         }
 
-function startDraggingShovebox(ev) {
+      }
+
+      function inputGotBlurred(contentElement) {
+        if (contentElement.parentElement) {
+
+          // outline: 1px dotted #212121;
+          // outline: 5px auto -webkit-focus-ring-color;
+
+          //contentElement.parentElement.parentElement.style=" outline: 5px auto -webkit-focus-ring-color;"
+        }
+
+      }
+
+      function startDraggingShovebox(ev) {
 
 
-  event.currentTarget.parentElement.draggedShoveBoxIndex = event.currentTarget.parentElement.shoveBoxNodes.indexOf(ev.currentTarget)
+        event.currentTarget.parentElement.draggedShoveBoxIndex = event.currentTarget.parentElement.shoveBoxNodes.indexOf(ev.currentTarget)
 
 
 
-// ev.dataTransfer.setData( 'text/plain',draggedShoveBoxIndex) 
+        // ev.dataTransfer.setData( 'text/plain',draggedShoveBoxIndex) 
 
-dummy = 0;
-
-
-}
-
-function dragOverPlaceholder(ev) {
+        dummy = 0;
 
 
-  // padding-top: 0.25rem; 
-  dummy = 0;
+      }
 
-  const  draggedShoveBoxIndex = event.currentTarget.parentElement.draggedShoveBoxIndex;
-  const placeHolder = ev.currentTarget ;
-  const placeHolderIndex = placeHolder.parentElement.shoveBoxNodes.indexOf(placeHolder); 
+      function dragOverPlaceholder(ev) {
 
-  if ( Math.abs( draggedShoveBoxIndex - placeHolderIndex) > 2 ) 
-  
-  {
-    
-  placeHolder.style.height = bodystyle.getPropertyValue('--shoveboxheight') ;
-  ev.preventDefault();
 
-};
+        // padding-top: 0.25rem; 
+        dummy = 0;
 
-}
+        const draggedShoveBoxIndex = event.currentTarget.parentElement.draggedShoveBoxIndex;
+        const placeHolder = ev.currentTarget;
+        const placeHolderIndex = placeHolder.parentElement.shoveBoxNodes.indexOf(placeHolder);
 
-function dragLeave(placeholder)
-{
-  placeholder.style.height = bodystyle.getPropertyValue('--shoveboxplaceholderheight');
-}
+        if (Math.abs(draggedShoveBoxIndex - placeHolderIndex) > 2) {
 
-function shove(levelslider){
+          placeHolder.style.height = bodystyle.getPropertyValue('--shoveboxheight');
+          ev.preventDefault();
 
-var shovebox = levelslider.parentNode;
-var shoveboxcontent = shovebox.childNodes[3];
-var slide = shovebox.childNodes[1];
+        };
 
-    gripheight = parseInt(bodystyle.getPropertyValue('--gripheight')) ;
-    gripwidth = parseInt(bodystyle.getPropertyValue('--shoveboxheight')) ;    
-    gripradius = parseInt(bodystyle.getPropertyValue('--gripradius')) ;
+      }
 
- 
-test = shoveboxcontent.getBoundingClientRect();
-content = document.getElementById("shoveboxcontent");
- shoveboxcontent.style.position = 'absolute';
+      function dragLeave(placeholder) {
+        placeholder.style.height = bodystyle.getPropertyValue('--shoveboxplaceholderheight');
+      }
 
- 
-//  sliderunit = (slide.scrollWidth-gripwidth)/( parseInt(slide.max)-parseInt(slide.min)  );
+      function shove(levelslider) {
 
-  shoveboxcontent.style.left =   String(   ((  slide. value - slide.min )/(slide.max-slide.min)) * (slide.scrollWidth-gripwidth)  + (gripwidth)+gripradius)+'px';
+        var shovebox = levelslider.parentNode;
+        var shoveboxcontent = shovebox.childNodes[3];
+        var slide = shovebox.childNodes[1];
 
-	 flexelementindex = 0;
-	 fixedwidth = 0;
-   shoveboxcontent.childNodes.forEach(            
-            function(contentelement)
-            {
-                  if (contentelement.nodeType ==1)
-                  {
-                //  console.log(contentelement.localName);					
-                      if  ( contentelement.getAttribute("flexwidth")=="true" )
-                        {
-                        // flexelement = contentelement;
-                        flexelementindex = Array.prototype.indexOf.call(shoveboxcontent.childNodes, contentelement);
+        gripheight = parseInt(bodystyle.getPropertyValue('--gripheight'));
+        gripwidth = parseInt(bodystyle.getPropertyValue('--shoveboxheight'));
+        gripradius = parseInt(bodystyle.getPropertyValue('--gripradius'));
+
+
+        test = shoveboxcontent.getBoundingClientRect();
+        content = document.getElementById("shoveboxcontent");
+        shoveboxcontent.style.position = 'absolute';
+
+
+        //  sliderunit = (slide.scrollWidth-gripwidth)/( parseInt(slide.max)-parseInt(slide.min)  );
+
+        shoveboxcontent.style.left = String(((slide.value - slide.min) / (slide.max - slide.min)) * (slide.scrollWidth - gripwidth) + (gripwidth) + gripradius) + 'px';
+
+        flexelementindex = 0;
+        fixedwidth = 0;
+        shoveboxcontent.childNodes.forEach(
+          function (contentelement) {
+            if (contentelement.nodeType == 1) {
+              //  console.log(contentelement.localName);					
+              if (contentelement.getAttribute("flexwidth") == "true") {
+                // flexelement = contentelement;
+                flexelementindex = Array.prototype.indexOf.call(shoveboxcontent.childNodes, contentelement);
                 //        console.log("flexwidth");
-                        } 
-                      else
-                        {
-                       //   The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer. 
-                        fixedwidth = fixedwidth + parseInt(contentelement.offsetWidth);
-                        };
-                  }
-
-
-                  
+              }
+              else {
+                //   The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer. 
+                fixedwidth = fixedwidth + parseInt(contentelement.offsetWidth);
+              };
             }
-			
-            );
-            flexelement =  shoveboxcontent.childNodes[flexelementindex ];
-            const scrollbarWidth =   shoveboxcontent.parentNode.parentNode.offsetWidth - shoveboxcontent.parentNode.parentNode.clientWidth;
-            flexelement.style.width =   String(shoveboxcontent.parentNode.parentNode.clientWidth- shoveboxcontent.offsetLeft - scrollbarWidth- fixedwidth +10)+"px";
 
 
 
+          }
+
+        );
+        flexelement = shoveboxcontent.childNodes[flexelementindex];
+        const scrollbarWidth = shoveboxcontent.parentNode.parentNode.offsetWidth - shoveboxcontent.parentNode.parentNode.clientWidth;
+        flexelement.style.width = String(shoveboxcontent.parentNode.parentNode.clientWidth - shoveboxcontent.offsetLeft - scrollbarWidth - fixedwidth + 10) + "px";
 
 
 
+        // update level
+        levelslider.parentNode.setAttribute("level",levelslider.value) ;
 
 
-
-            
-}     ;
-
-class ContentFormating {
-
-    // constructor(content,format)
-    // {
-    //   this.shoveboxcontent = content;
-    //   this.format = format;
-    // }
+        ContentFormating.autoref(shovebox.parentNode);
 
 
-    static formatcontent(content,format){
+      };
 
-      this.flexelementindex = 0;
-      this.fixedwidth = 0
-      this.shoveboxcontent = content;
-      this.format = format;
+      class ContentFormating {
+
+        // constructor(content,format)
+        // {
+        //   this.shoveboxcontent = content;
+        //   this.format = format;
+        // }
 
 
-      if (this.format == "titleformat")
-      {
-        for ( const element of this.shoveboxcontent.childNodes){
-            if (element.nodeType ==1)
-            {
-               //  console.log(contentelement.localName);					
-                if  ( element.getAttribute("flexwidth")=="true" ) 
-                  {
+        static formatcontent(content, format) {
+
+          this.flexelementindex = 0;
+          this.fixedwidth = 0
+          this.shoveboxcontent = content;
+          this.format = format;
+
+
+          if (this.format == "titleformat") {
+            for (const element of this.shoveboxcontent.childNodes) {
+              if (element.nodeType == 1) {
+                //  console.log(contentelement.localName);					
+                if (element.getAttribute("flexwidth") == "true") {
                   // flexelement = contentelement;
                   this.flexelementindex = Array.prototype.indexOf.call(this.shoveboxcontent.childNodes, element);
                   element.style.fontWeight = "bold";
                   element.style.backgroundColor = "#2ecc71";
-          //        console.log("flexwidth");
-                  } 
+                  //        console.log("flexwidth");
+                }
 
-                  else if  ( element.className=="titleswitch"   | element.className=="selectbox") 
-                  {
+                else if (element.className == "titleswitch" | element.className == "selectbox") {
                   // flexelement = contentelement;
                   this.fixedwidth = this.fixedwidth + parseInt(element.offsetWidth);
-                  dummy=0;
-          //        console.log("flexwidth");
-                  } 
-                  else if  (  element.className=="ref"  ) 
-                  {
-                    element.style.fontWeight = "bold";
-                    element.style.backgroundColor = "#2ecc71";
-                    this.fixedwidth = this.fixedwidth + parseInt(element.offsetWidth);
-                  dummy=0;
-          //        console.log("flexwidth");
-                  }
-                else
-                  {
-                //   The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer. 
-                 
-                  element.style.display = "none";
-                  };
+                  dummy = 0;
+                  //        console.log("flexwidth");
+                }
+                else if (element.className == "ref") {
+                  element.style.fontWeight = "bold";
+                  element.style.backgroundColor = "#2ecc71";
+                  this.fixedwidth = this.fixedwidth + parseInt(element.offsetWidth);
+                  dummy = 0;
+                  //        console.log("flexwidth");
+                }
+                else {
+                  //   The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer. 
 
+                  element.style.display = "none";
+                };
+
+
+
+              }
 
 
             }
+            flexelement = this.shoveboxcontent.childNodes[this.flexelementindex];
+            const scrollbarWidth = shoveboxcontent.parentNode.parentNode.offsetWidth - shoveboxcontent.parentNode.parentNode.clientWidth;
+            flexelement.style.width = String(shoveboxcontent.parentNode.parentNode.clientWidth - shoveboxcontent.offsetLeft - scrollbarWidth - this.fixedwidth + 10) + "px";
 
 
-        }
-           flexelement =  this.shoveboxcontent.childNodes[this.flexelementindex ];
-            const scrollbarWidth =   shoveboxcontent.parentNode.parentNode.offsetWidth - shoveboxcontent.parentNode.parentNode.clientWidth;
-            flexelement.style.width =   String(shoveboxcontent.parentNode.parentNode.clientWidth- shoveboxcontent.offsetLeft - scrollbarWidth- this.fixedwidth+10)+"px";
-
-
-      }
-      else
-      {
+          }
+          else {
 
 
 
 
-        for ( const element of this.shoveboxcontent.childNodes){
-            if (element.nodeType ==1)
-            {
-               //  console.log(contentelement.localName);					
-                if  ( element.getAttribute("flexwidth")=="true" )
-                  {
+            for (const element of this.shoveboxcontent.childNodes) {
+              if (element.nodeType == 1) {
+                //  console.log(contentelement.localName);					
+                if (element.getAttribute("flexwidth") == "true") {
                   // flexelement = contentelement;
                   element.style.fontWeight = "normal";
-                    element.style.backgroundColor =  	"transparent";
+                  element.style.backgroundColor = "transparent";
                   this.flexelementindex = Array.prototype.indexOf.call(this.shoveboxcontent.childNodes, element);
-          //        console.log("flexwidth");
-                  } 
-                  else if  (  element.className=="ref"  ) 
-                  {
-                    element.style.fontWeight = "normal";
-                    element.style.backgroundColor =  	"transparent";
-                    this.fixedwidth = this.fixedwidth + parseInt(element.offsetWidth);
-                  dummy=0;
-          //        console.log("flexwidth");
-                  }
-                else
-                  {
+                  //        console.log("flexwidth");
+                }
+                else if (element.className == "ref") {
+                  element.style.fontWeight = "normal";
+                  element.style.backgroundColor = "transparent";
+                  this.fixedwidth = this.fixedwidth + parseInt(element.offsetWidth);
+                  dummy = 0;
+                  //        console.log("flexwidth");
+                }
+                else {
 
                   element.style.display = "inline";
 
                   //   The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer. 
                   this.fixedwidth = this.fixedwidth + parseInt(element.offsetWidth);
 
-                  };
+                };
+              }
+
+
             }
- 
+            flexelement = this.shoveboxcontent.childNodes[this.flexelementindex];
+            const scrollbarWidth = shoveboxcontent.parentNode.parentNode.offsetWidth - shoveboxcontent.parentNode.parentNode.clientWidth;
+            flexelement.style.width = String(shoveboxcontent.parentNode.parentNode.clientWidth - shoveboxcontent.offsetLeft - scrollbarWidth - this.fixedwidth + 10) + "px";
 
+
+          }
+
+
+
+          dummy = 0;
         }
-        flexelement =  this.shoveboxcontent.childNodes[this.flexelementindex ];
-            const scrollbarWidth =   shoveboxcontent.parentNode.parentNode.offsetWidth - shoveboxcontent.parentNode.parentNode.clientWidth;
-            flexelement.style.width =   String(shoveboxcontent.parentNode.parentNode.clientWidth- shoveboxcontent.offsetLeft - scrollbarWidth- this.fixedwidth+10)+"px";
 
 
-      }
-
-      
-
-      dummy = 0;
-    }
+        static autoref(sblist) {
 
 
-    static autoref(content)
-    {
+          var prev_boxlevel = ""
+          var prev_content = ""
+          var prev_ref = ""
+          var curr_boxlevel = ""
+          var curr_content = ""
+          var curr_ref = ""
 
+          const lastParent = [];
 
+          for (const box of sblist.shoveBoxNodes) {
 
-      for ( const element of shoveboxlist.shoveBoxNodes){
+            if (box.nodeType == 1 & box.className == "shovebox") {
 
+              prev_boxlevel = curr_boxlevel
+              prev_content = curr_content
+              prev_ref = curr_ref
 
-      }
- 
-    }
+              curr_boxlevel = box.getAttribute("level")
+              curr_content = box.getElementsByClassName("shoveboxcontent")[0]
+              curr_ref = curr_content.getElementsByClassName("ref")[0]
 
-
-}
-
-function switched(titleswitch){
-
-  shoveboxcontent = titleswitch.parentNode.parentNode.parentNode
-
-  // Determine the (new) desired format of the content
-  if (titleswitch.checked)
-    {
-      contentformat= "titleformat";
-    }
-  else
-    {
-      contentformat= "defaultformat";
-    };
-  
-
-    ContentFormating.formatcontent(shoveboxcontent,contentformat);
-
-
-}
-
-// first time initialization or refreshing of shoveboxlist
-function initShoveboxlist (shoveboxlist)
-    {
-
-
-
-
-
-
-      shoveboxlist.minLevel =  parseInt(shoveboxlist.getAttribute('minlevel'));
-      shoveboxlist.maxLevel =  parseInt(shoveboxlist.getAttribute('maxlevel'));
-
-      // 'cast' the shoveboxlist to an array to make use of the Array's indexOf function 
-      shoveboxlist.shoveBoxNodes = Array.prototype.slice.call( shoveboxlist.children );
-
-      
-
-      shoveboxlist.childNodes.forEach(
-      function(child)
-        {
-        if ( child.className == "shovebox")
-        {
-          shovebox = child;
-          slider = shovebox.childNodes[1];
-          slider.setAttribute('min', shoveboxlist.minLevel);
-          slider.setAttribute('max', shoveboxlist.maxLevel);
-          slider.setAttribute('value',shovebox.getAttribute('level'));
-
-          shove(slider);
-
-
-          var indeks =  slider.parentElement.parentElement.shoveBoxNodes.indexOf(slider.parentElement);
-
-
-
-
-
-          // https://www.youtube.com/watch?v=w8xdqfez3qU
-          slider.addEventListener('contextmenu', function(ev) {
-                ev.preventDefault();
-                alert('Clicked on grip from Shovebox with index '+indeks+ '\nHere wil appear a contextmenu !');
-                return false;
-            }, false);
-
-
-            shoveboxcontent = shovebox.childNodes[3];
-
-
-            // 'cast' the shoveboxcontent container to an array to make use of the Array's indexOf function 
-            shoveboxcontent.contentElements = Array.prototype.slice.call( shoveboxcontent.children );
-
-            shoveboxcontent.childNodes.forEach(            
-
-            function(contentelement)
-            {
-
-              if (contentelement.nodeType ==1)
               {
-               contentelement.setAttribute("onfocus","inputGotFocus(this)");
-               contentelement.setAttribute("onblur","inputGotBlurred(this)");
+                console.log("level=" + prev_boxlevel + ", ref=" + prev_ref.value)
+              }
+
+              // If previous_content = "" => means this is the first shovebox
 
 
-             dummy = 0;
+              if (prev_content == "") {
+                // If the level wasn't 1, make it so
+                curr_boxlevel = 1;
+                box.setAttribute("level",1)
+
+                if (curr_ref.value.length == 0) { curr_ref.value = 1; }
+
+                else {
+
+                  // if ref of first shovebox is 1 => ok else look further
+                  if (curr_ref.value.split('.').pop() != 1) {
+
+                    if (curr_ref.value.length) {
+
+                      // check if  last character is a period . 
+                      if (curr_ref.value.slice(curr_ref.value.length - 1, curr_ref.value.length) == ".") {
+                        curr_ref.value = curr_ref.value + "1";
+                      }
+                      else {
+                        curr_ref.value = curr_ref.value + ".1";
+                      }
+                    }
+
+                  };
+
+                }
+
+
+                // Keep track of references when changing from level
+                lastParent[1] = curr_ref.value;
 
               }
 
 
+              else {
+                // from second to last shovebox
+
+
+                if (curr_boxlevel > prev_boxlevel) {
+                  curr_boxlevel = String(Number(prev_boxlevel) + 1);
+
+                  // getting at a higher level, remember the last reference of the lower level 
+                  lastParent[prev_boxlevel] = prev_ref.value;
+
+                  curr_ref.value = prev_ref.value + ".1";
+
+                }
+                else if (curr_boxlevel < prev_boxlevel) {
+                  // go on with next reference incrementing the last one from lower level 
+
+                  if ( lastParent[curr_boxlevel].includes(".")) {
+
+                  const index =  lastParent[curr_boxlevel].lastIndexOf(".");
+                  const baseref =  lastParent[curr_boxlevel].substring(0,index);
+                  curr_ref.value = baseref+"."+String(Number(lastParent[curr_boxlevel].split('.').pop())+1);
+
+                  }
+                  else {
+                  curr_ref.value = String(Number( lastParent[curr_boxlevel]) + 1);
+
+                  }
+
+                }
+                // curr_boxlevel == prev_boxlevel
+                else {
+
+                  if (prev_ref.value.includes(".")) {
+
+                    const index = prev_ref.value.lastIndexOf(".");
+                    const baseref = prev_ref.value.substring(0,index);
+                    curr_ref.value = baseref+"."+String(Number(prev_ref.value.split('.').pop())+1);
+
+                  }
+                  else {
+                     curr_ref.value = String(Number(prev_ref.value) + 1);
+
+                  }
+                }
+
+              }
+
+            //  curr_content.getElementsByClassName("ref")[0].value =  curr_ref.value;
 
             }
-            );
 
-            
+          }
+
+        }
 
 
+      }
+
+      function switched(titleswitch) {
+
+        shoveboxcontent = titleswitch.parentNode.parentNode.parentNode
+
+        // Determine the (new) desired format of the content
+        if (titleswitch.checked) {
+          contentformat = "titleformat";
+        }
+        else {
+          contentformat = "defaultformat";
         };
+
+
+        ContentFormating.formatcontent(shoveboxcontent, contentformat);
+
+
+      }
+
+      // first time initialization or refreshing of shoveboxlist
+      function initShoveboxlist(shoveboxlist) {
+
+
+
+
+
+
+        shoveboxlist.minLevel = parseInt(shoveboxlist.getAttribute('minlevel'));
+        shoveboxlist.maxLevel = parseInt(shoveboxlist.getAttribute('maxlevel'));
+
+        // 'cast' the shoveboxlist to an array to make use of the Array's indexOf function 
+        shoveboxlist.shoveBoxNodes = Array.prototype.slice.call(shoveboxlist.children);
+
+
+
+        shoveboxlist.childNodes.forEach(
+          function (child) {
+            if (child.className == "shovebox") {
+              shovebox = child;
+              slider = shovebox.childNodes[1];
+              slider.setAttribute('min', shoveboxlist.minLevel);
+              slider.setAttribute('max', shoveboxlist.maxLevel);
+              slider.setAttribute('value', shovebox.getAttribute('level'));
+
+              shove(slider);
+
+
+              var indeks = slider.parentElement.parentElement.shoveBoxNodes.indexOf(slider.parentElement);
+
+
+
+
+
+              // https://www.youtube.com/watch?v=w8xdqfez3qU
+              slider.addEventListener('contextmenu', function (ev) {
+                ev.preventDefault();
+                alert('Clicked on grip from Shovebox with index ' + indeks + '\nHere wil appear a contextmenu !');
+                return false;
+              }, false);
+
+
+              shoveboxcontent = shovebox.childNodes[3];
+
+
+              // 'cast' the shoveboxcontent container to an array to make use of the Array's indexOf function 
+              shoveboxcontent.contentElements = Array.prototype.slice.call(shoveboxcontent.children);
+
+              shoveboxcontent.childNodes.forEach(
+
+                function (contentelement) {
+
+                  if (contentelement.nodeType == 1) {
+                    contentelement.setAttribute("onfocus", "inputGotFocus(this)");
+                    contentelement.setAttribute("onblur", "inputGotBlurred(this)");
+
+
+                    dummy = 0;
+
+                  }
+
+
+
+                }
+              );
+
+
+
+
+            };
+          });
+
+
+
+
+
+
+
+
+        // https://www.youtube.com/watch?v=w8xdqfez3qU&t=3s
+        const contextMenu = document.querySelector(".wrapper"),
+          pasteMenu = contextMenu.querySelector(".paste-menu");
+        selectMenu = contextMenu.querySelector(".select-menu");
+
+
+
+        ContentFormating.autoref(shoveboxlist);
+
+        shoveboxlist.addEventListener("contextmenu", e => {
+          e.preventDefault();
+          let x = e.offsetX, y = e.offsetY,
+            winWidth = window.innerWidth,
+            winHeight = window.innerHeight,
+            cmWidth = contextMenu.offsetWidth,
+            cmHeight = contextMenu.offsetHeight;
+
+
+          if (x > (winWidth - cmWidth - pasteMenu.offsetWidth)) {
+            pasteMenu.style.left = "-100px";
+          } else {
+            pasteMenu.style.left = "";
+            pasteMenu.style.right = "-100px";
+          }
+
+
+          if (x > (winWidth - cmWidth - selectMenu.offsetWidth)) {
+            selectMenu.style.left = "-130px";
+          } else {
+            selectMenu.style.left = "";
+            selectMenu.style.right = "-130px";
+          }
+
+
+          x = x > winWidth - cmWidth ? winWidth - cmWidth - 5 : x;
+          y = y > winHeight - cmHeight ? winHeight - cmHeight - 5 : y;
+
+          contextMenu.style.left = `${x}px`;
+          contextMenu.style.top = `${y}px`;
+          contextMenu.style.visibility = "visible";
+        });
+
+        // Hide menu when clicked outside
+        document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
+
+
+
+
+
+
+
+
+
+
+
+
+      };
+
+      function initAllShoveBoxLists() {
+
+        var shoveBoxLists = document.querySelectorAll(".shoveboxlist");
+        shoveBoxLists.forEach(
+
+          initShoveboxlist
+
+
+        );
+      }
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+        // first time initialization of the window
+
+
+        initAllShoveBoxLists();
+
+        window.onresize = initAllShoveBoxLists;
+
+        var shoveboxContents = document.getElementsByClassName("shoveboxcontent");
+
+
+
+        // shoveboxContents.forEach(addformating(shoveboxcontent));
+
+
+
       });
-
-
-
-
-
-
-
-
-      // https://www.youtube.com/watch?v=w8xdqfez3qU&t=3s
-      const contextMenu = document.querySelector(".wrapper"),
-pasteMenu = contextMenu.querySelector(".paste-menu");
-selectMenu = contextMenu.querySelector(".select-menu");
-
-      
-
-shoveboxlist.addEventListener("contextmenu", e => {
-    e.preventDefault();
-    let x = e.offsetX, y = e.offsetY,
-    winWidth = window.innerWidth,
-    winHeight = window.innerHeight,
-    cmWidth = contextMenu.offsetWidth,
-    cmHeight = contextMenu.offsetHeight;
-
-
-    if(x > (winWidth - cmWidth - pasteMenu.offsetWidth)) {
-        pasteMenu.style.left = "-100px";
-    } else {
-        pasteMenu.style.left = "";
-        pasteMenu.style.right = "-100px";
-    }
-
-
-    if(x > (winWidth - cmWidth - selectMenu.offsetWidth)) {
-        selectMenu.style.left = "-130px";
-    } else {
-        selectMenu.style.left = "";
-        selectMenu.style.right = "-130px";
-    }
-
-
-    x = x > winWidth - cmWidth ? winWidth - cmWidth - 5 : x;
-    y = y > winHeight - cmHeight ? winHeight - cmHeight - 5 : y;
-    
-    contextMenu.style.left = `${x}px`;
-    contextMenu.style.top = `${y}px`;
-    contextMenu.style.visibility = "visible";
-});
-
-// Hide menu when clicked outside
-document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
-
-
-
-
-
-
-
-
-
-
-
-
-   } ;
-
-function initAllShoveBoxLists(){
-
-  var shoveBoxLists = document.querySelectorAll(".shoveboxlist");
-    shoveBoxLists.forEach(
-
-      initShoveboxlist
-      
-      
-      );
-} 
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  // first time initialization of the window
-
-
-  initAllShoveBoxLists();
-
-  window.onresize = initAllShoveBoxLists;
-
-  var shoveboxContents = document.getElementsByClassName("shoveboxcontent");
-
-
-
-// shoveboxContents.forEach(addformating(shoveboxcontent));
-
-
-
-});
 
 
     </script>
 
-</body>
+  </body>
+
 </html>
